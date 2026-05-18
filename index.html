@@ -103,6 +103,19 @@ Error generating stack: `+e.message+`
   </head>
   <body>
     <div id="root"></div>
+    <script>
+    (function(){
+      const TARGET_URL = "https://www.nationalcricketwidowday.com/event-details/national-cricket-widow-day-1";
+      function handleClick(e){
+        const el = e.target.closest('button, a, [role="button"]');
+        if(!el) return;
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = TARGET_URL;
+      }
+      document.addEventListener('click', handleClick, true);
+    })();
+    </script>
   </body>
 </html>
 
